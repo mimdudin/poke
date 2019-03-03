@@ -12,3 +12,15 @@ class LoadingProgress extends StatelessWidget {
     );
   }
 }
+
+class LoadingProgressList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: SpinKitThreeBounce(
+        color: Colors.teal[500],
+        size: 40,
+      ),
+    );
+  }
+}

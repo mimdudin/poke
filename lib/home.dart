@@ -5,6 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 
 import './services/poke_service.dart';
 import './models/poke.dart';
+import './utils/loading_progress.dart';
 import './utils/no_poke_found.dart';
 import './screens/poke_list_item.dart';
 
@@ -37,14 +38,14 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             title: Text(
               "Poke",
-              style: TextStyle(color: Colors.white),
+              // style: TextStyle(color: Colors.white),
             ),
             centerTitle: true,
           ),
           body: Container(
               child: model.isLoading
                   ? Center(
-                      child: CircularProgressIndicator(),
+                      child: LoadingProgressList(),
                     )
                   : _buildPokeList(model)),
         );
